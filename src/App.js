@@ -4,7 +4,7 @@ import TextField from './Compenents/TextField';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container mx-auto">
       <h1 className="text-4xl font-bold">Text to Speech</h1>
       <TextField/>
     </div>
