@@ -18,7 +18,8 @@ const TextField = () => {
     return (
         <div className='my-16 flex lg:flex-row md:flex-row flex-col gap-10 justify-center'>
             <div className='lg:w-[500px] w-[320px] shadow-xl p-8'>
-                <h4 className='text-blue-700 text-2xl font-medium py-3'>Enter your text</h4>
+                <h4 className='text-blue-700 text-2xl font-medium py-3'>Text to Speech</h4>
+                <h4 className='text-blue-700 text-xl font-medium py-3'>Enter your text</h4>
                 <textarea type="text" onChange={event => setTextInput(event.target.value)} className="shadow appearance-none border rounded lg:w-[450px] w-[300px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
                 <br />
                 <button className="" onClick={handleSpeak}>
@@ -27,7 +28,8 @@ const TextField = () => {
             </div>
 
             <div className='lg:w-[500px] w-[320px] shadow-xl p-8'>
-                <h4 className='text-blue-700 text-2xl font-medium py-3'>Voice Input</h4>
+                <h4 className='text-blue-700 text-2xl font-medium py-3'>Voice to Text</h4>
+                <h4 className='text-blue-700 text-xl font-medium py-3'>Voice Input</h4>
                 <button onMouseDown={listen} onMouseUp={stop}>
                     <img className="w-16"  src="https://icones.pro/wp-content/uploads/2021/12/icone-de-microphone-bleue.png" alt=""/>
                 </button>
