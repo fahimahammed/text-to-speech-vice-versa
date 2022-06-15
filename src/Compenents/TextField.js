@@ -3,11 +3,12 @@ import { useSpeechRecognition, useSpeechSynthesis } from 'react-speech-kit';
 
 const TextField = () => {
     const [textInput, setTextInput] = useState('Please enter your text');
+    const [voiceInput, setVoiceInput] = useState('');
 
     const { speak } = useSpeechSynthesis();
     const { listen, listening, stop } = useSpeechRecognition({
         onResult: (result) => {
-            setTextInput(result);
+            setVoiceInput(result);
         }
     })
 
@@ -36,7 +37,7 @@ const TextField = () => {
                 {
                     listening && <p className="font-bold py-2">I am listening.</p>
                 }
-                <textarea type="text" value={textInput} className="shadow appearance-none border rounded lg:w-[450px] w-[300px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                <textarea type="text" value={voiceInput} className="shadow appearance-none border rounded lg:w-[450px] w-[300px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
             </div>
 
         </div>
