@@ -12,7 +12,7 @@ const TextField = () => {
     })
 
     const handleSpeak = async () => {
-        await speak({ text: textInput });
+        await speak({ text: textInput })
     }
 
     return (
@@ -26,14 +26,15 @@ const TextField = () => {
                 </button>
             </div>
 
-            <div className='w-[300px] shadow-xl p-8'>
+            <div className='lg:w-[500px] w-[320px] shadow-xl p-8'>
                 <h4 className='text-blue-700 text-2xl font-medium py-3'>Voice Input</h4>
-                <button onMouseDown={listen} onMouseUp={handleSpeak}>
-                    <img className="w-16" onMouseUp={stop} src="https://icones.pro/wp-content/uploads/2021/12/icone-de-microphone-bleue.png" alt=""/>
+                <button onMouseDown={listen} onMouseUp={stop}>
+                    <img className="w-16"  src="https://icones.pro/wp-content/uploads/2021/12/icone-de-microphone-bleue.png" alt=""/>
                 </button>
                 {
                     listening && <p className="font-bold py-2">I am listening.</p>
                 }
+                <textarea type="text" value={textInput} className="shadow appearance-none border rounded lg:w-[450px] w-[300px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
             </div>
 
         </div>
